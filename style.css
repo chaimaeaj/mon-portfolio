@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --bg-color: #eef2f7;
+    --card-bg: #ffffff;
+    --primary-color: #4a69bd;
+    --secondary-color: #6a82fb;
+    --text-color: #333d47;
+    --heading-color: #212529;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--card-bg);
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 1.5px;
+}
+
+/* Menu déroulant */
+.dropdown-menu ul {
+    list-style-type: none;
+    margin-top: 1rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: var(--card-bg);
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    box-shadow: 0 8px 16px var(--shadow-medium);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: var(--card-bg);
+    padding: 12px 16px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+}
+
+.dropdown-menu li:hover .dropdown-content {
+    display: block;
+}
+
+/* Sections et cartes de projet */
+main {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-container {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-light);
+    margin-bottom: 2.5rem;
+}
+
+.section-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--heading-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    border: 1px solid #e0e6ed;
+    border-left: 5px solid var(--primary-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px var(--shadow-medium);
+}
+
+.project-card h3 {
+    font-family: '
